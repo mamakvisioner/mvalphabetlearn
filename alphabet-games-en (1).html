@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>10 Alphabet Games</title>
+<style>
+:root{--bg:#fff;--card:#fff;--ink:#4b4b4b;--mut:#8f8f8f;--line:#e5e5e5;--a:#58cc02;--b:#1cb0f6;--c:#ffc800;--p:#ce82ff;--ok:#58cc02;--bad:#ff4b4b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#131f24;--card:#131f24;--ink:#f1f7fb;--mut:#8fa3ad;--line:#37464f}}
+:root[data-theme="dark"]{--bg:#131f24;--card:#131f24;--ink:#f1f7fb;--mut:#8fa3ad;--line:#37464f}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:"Baloo 2","Nunito","Trebuchet MS",system-ui,sans-serif}
+main{max-width:460px;margin:0 auto;padding:18px 16px 28px;text-align:center}
+h1{font-size:1.5rem;margin:6px 0 2px}h2{margin:8px 0}
+.sub,.hint{color:var(--mut);margin:6px 0}
+.hide{display:none}
+.gm{display:flex;align-items:center;gap:14px;width:100%;text-align:left;font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:18px;padding:14px 16px;margin-top:12px;cursor:pointer;box-shadow:0 4px 0 var(--line)}
+.gm svg{width:46px;height:46px;flex:none}.gm b{display:block;font-size:1.15rem}.gm span{color:var(--mut);font-size:.9rem}
+.bar{display:flex;justify-content:space-between;align-items:center;font-weight:700;margin-bottom:6px}
+.btn{font:inherit;font-weight:800;font-size:1.05rem;border:0;border-radius:16px;padding:12px 26px;margin-top:12px;background:var(--a);color:#fff;text-transform:uppercase;letter-spacing:.04em;cursor:pointer;box-shadow:0 4px 0 #58a700}
+.btn.gh{background:transparent;color:var(--mut);box-shadow:none;padding:8px 14px;margin-top:4px}
+.card{background:var(--card);border:2px solid var(--line);border-bottom-width:5px;border-radius:20px;padding:20px 14px;margin-top:10px}
+.em{font-size:5rem;line-height:1.1}
+.seq{display:flex;gap:10px;justify-content:center;font-size:2.7rem;font-weight:800}
+.seq span{display:inline-block;min-width:1.3em}
+.gap{border-bottom:5px solid var(--b);color:var(--b)}
+.seq .ok{border-bottom:5px solid var(--ok);color:var(--ok)}
+.grid{display:grid;gap:10px;margin-top:14px}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g2{grid-template-columns:1fr 1fr}.g2 .tile{font-size:1.4rem}
+.row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:14px}.row .tile{width:68px}
+.tile{font:inherit;font-size:2.2rem;font-weight:800;color:#fff;background:var(--p);border:0;border-radius:18px;padding:16px 0;cursor:pointer;box-shadow:0 5px 0 rgba(0,0,0,.18);transition:background .2s}
+.tile.cv{background:var(--b)}
+.tile.up{background:var(--c);color:#3b2f2f}
+.tile.hit{background:var(--ok);color:#fff}
+.tile.bad{background:var(--bad);color:#fff}
+.stars{font-size:2.4rem}
+.bubble{display:inline-block;position:relative;background:var(--card);border:2px solid var(--line);border-bottom-width:4px;border-radius:18px;padding:10px 16px;font-weight:700;margin-top:8px}
+.bubble:after{content:"";position:absolute;left:50%;bottom:-12px;margin-left:-8px;border:8px solid transparent;border-top-color:var(--line);border-bottom:0}
+#bear{cursor:pointer;margin-top:6px}
+.lid{transform-box:fill-box;transform-origin:50% 0;transform:scaleY(0)}
+@media(prefers-reduced-motion:no-preference){.lid{animation:bl 4.6s infinite}}
+@keyframes bl{0%,93%,100%{transform:scaleY(0)}96%{transform:scaleY(1)}}
+</style>
+</head>
+<body>
+<main>
+  <section id="home">
+    <h1 style="font-size:2rem;margin:10px 0 0">Alphabet Games</h1>
+    <p class="sub">10 fun games to learn the letters</p>
+    <div class="bubble">Hi! Let's learn the letters together!</div>
+    <svg id="bear" viewBox="0 0 200 210" width="230" height="241" role="img" aria-label="Bear"><g stroke="#3b2f2f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M52 205c-6-40 4-72 48-72s54 32 48 72z" fill="#a9703c"/><circle cx="52" cy="52" r="20" fill="#a9703c"/><circle cx="53" cy="54" r="9" fill="#e9a8a0" stroke="none"/><circle cx="150" cy="49" r="20" fill="#a9703c"/><circle cx="149" cy="51" r="9" fill="#e9a8a0" stroke="none"/><ellipse cx="100" cy="88" rx="56" ry="50" fill="#a9703c"/><path d="M92 41c-3-9 4-13 9-10-1 5 5 4 7 9" fill="none"/><ellipse cx="100" cy="104" rx="24" ry="19" fill="#e8c394"/><path d="M92 93c0-5 16-5 16 0 0 5-8 9-8 9s-8-4-8-9z" fill="#3b2f2f"/><path d="M100 102v6M92 110c4 5 12 5 16 0" fill="none" stroke-width="3"/><circle cx="78" cy="80" r="8" fill="#fff" stroke-width="3"/><circle cx="122" cy="80" r="8" fill="#fff" stroke-width="3"/><g class="pp"><circle cx="78" cy="81" r="4.5" fill="#3b2f2f" stroke="none"/><circle cx="80" cy="79" r="1.6" fill="#fff" stroke="none"/><circle cx="122" cy="81" r="4.5" fill="#3b2f2f" stroke="none"/><circle cx="124" cy="79" r="1.6" fill="#fff" stroke="none"/></g><ellipse class="lid" cx="78" cy="80" rx="9.5" ry="9.5" fill="#a9703c" stroke="none"/><ellipse class="lid" cx="122" cy="80" rx="9.5" ry="9.5" fill="#a9703c" stroke="none"/><path d="M69 67q8-6 17-1M114 65q9-5 17 2" fill="none" stroke-width="3"/><ellipse cx="62" cy="100" rx="9" ry="6" fill="#ff8fa3" opacity=".65" stroke="none"/><ellipse cx="138" cy="99" rx="9" ry="6" fill="#ff8fa3" opacity=".65" stroke="none"/><path d="M48 88l-7-2M49 95l-8 3M152 87l7-2M151 94l8 3" fill="none" stroke-width="2.5"/><path d="M58 140c14 14 70 14 84 0l4 16c-16 14-76 14-92 0z" fill="#1cb0f6"/><path d="M134 152l6 28 14-4-5-26z" fill="#1cb0f6"/><path d="M80 148v9M100 150v9M120 148v9" fill="none" stroke="#fff" stroke-width="3"/><rect x="74" y="158" width="52" height="46" rx="10" fill="#ffc800"/><text x="100" y="192" font-size="34" font-weight="800" text-anchor="middle" fill="#3b2f2f" stroke="none">A</text><circle cx="72" cy="178" r="12" fill="#a9703c"/><circle cx="128" cy="178" r="12" fill="#a9703c"/></g></svg>
+    <div><button class="btn" id="go">Start</button></div>
+  </section>
+  <section id="menu" class="hide">
+    <button class="btn gh" id="tohome" style="margin:0">← Home</button><h1>Pick a Game</h1>
+    <p class="sub">Pilih satu game dan mulai bermain!</p>
+    <div id="list"></div>
+  </section>
+  <section id="play" class="hide">
+    <div class="bar"><button class="btn gh" id="back" style="margin:0">← Menu</button><span id="ttl"></span><span id="sc" style="min-width:70px;text-align:right"></span></div>
+    <div id="stage"></div>
+  </section>
+</main>
+
+<script>
+const $=id=>document.getElementById(id),stage=$("stage");
+const AB="ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+const sh=a=>a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(x=>x[1]);
+const say=t=>{try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang="en-US";u.rate=.85;speechSynthesis.speak(u)}catch(e){}};
+let tm;
+const tile=(t,cls="")=>{const b=document.createElement("button");b.className="tile "+cls;b.textContent=t;return b};
+const bad=b=>{b.classList.add("bad");setTimeout(()=>b.classList.remove("bad"),500)};
+
+function done(s,t,again){
+  stage.innerHTML='<div class="card"><div class="stars">'+[1,2,3].map(n=>star(n<=s)).join("")+'</div><h2>'+t+'</h2><button class="btn" id="ag">Play Again</button><br><button class="btn gh" id="mn">Game Menu</button></div>';
+  $("ag").onclick=again;$("mn").onclick=menu;say("Great job!");
+}
+
+/* Aset SVG */
+const SK='stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"';
+const svg=(b,s=96)=>'<svg viewBox="0 0 64 64" width="'+s+'" height="'+s+'"><g '+SK+'>'+b+'</g></svg>';
+const fc=(x,y,d=8)=>{const e=(cx,cy,rx,ry,f)=>'<ellipse cx="'+cx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="'+f+'" stroke="none"/>';return e(x-d,y,2.2,2.2,"#3b2f2f")+e(x+d,y,2.2,2.2,"#3b2f2f")+e(x-d-3,y+4,3,2,"#ff8fa3")+e(x+d+3,y+4,3,2,"#ff8fa3")+'<path d="M'+(x-2)+' '+(y+3)+'q2 2.5 4 0" fill="none" stroke-width="2"/>'};
+const star=on=>svg('<path d="M32 6l7.5 16.5 18 2-13.5 12 4 17.5L32 44.5 16 54l4-17.5-13.5-12 18-2z" fill="'+(on?"#ffd43b":"#e4dfd6")+'"/>'+(on?fc(32,30,6):""),46);
+const SV={
+HORSE:'<path d="M18 22L20 6l10 10z" fill="#c68642"/><path d="M46 22L44 6 34 16z" fill="#c68642"/><path d="M18 22c0-6 6-10 14-10s14 4 14 10v14c0 6-2 8-3 14H21c-1-6-3-8-3-14z" fill="#c68642"/><path d="M26 12c2 6 8 6 12 0 0 6-3 10-6 10s-6-4-6-10z" fill="#6b3f1d"/><ellipse cx="32" cy="47" rx="11" ry="9" fill="#f1c9a0"/><circle cx="24" cy="32" r="2.2" fill="#3b2f2f" stroke="none"/><circle cx="40" cy="32" r="2.2" fill="#3b2f2f" stroke="none"/><ellipse cx="21" cy="38" rx="3" ry="2" fill="#ff8fa3" stroke="none"/><ellipse cx="43" cy="38" rx="3" ry="2" fill="#ff8fa3" stroke="none"/><circle cx="28" cy="47" r="1.6" fill="#3b2f2f" stroke="none"/><circle cx="36" cy="47" r="1.6" fill="#3b2f2f" stroke="none"/>',
+DUCK:'<ellipse cx="30" cy="44" rx="20" ry="13" fill="#ffd43b"/><circle cx="38" cy="22" r="13" fill="#ffd43b"/><path d="M50 20c6 0 9 2 9 4.5S56 28 50 27z" fill="#ff922b"/><path d="M18 42c4-5 12-5 15 1-3 6-11 7-15-1z" fill="#fcc419"/><circle cx="41" cy="19" r="2.2" fill="#3b2f2f" stroke="none"/><ellipse cx="34" cy="27" rx="3" ry="2" fill="#ff8fa3" stroke="none"/>',
+FLOWER:'<path d="M32 36v24" fill="none" stroke="#3a9d5d" stroke-width="4"/><path d="M32 52c6-6 12-4 14-2-4 5-10 6-14 2z" fill="#5bd16b"/><circle cx="32" cy="13" r="9.5" fill="#ff8fa3"/><circle cx="46" cy="23" r="9.5" fill="#ff8fa3"/><circle cx="41" cy="39" r="9.5" fill="#ff8fa3"/><circle cx="23" cy="39" r="9.5" fill="#ff8fa3"/><circle cx="18" cy="23" r="9.5" fill="#ff8fa3"/><circle cx="32" cy="28" r="10" fill="#ffd43b"/>'+fc(32,27,4),
+BREAD:'<path d="M10 30c0-10 8-14 22-14s22 4 22 14c0 3-2 5-4 5v15H14V35c-2 0-4-2-4-5z" fill="#f4b860"/>'+fc(32,38),
+MILK:'<rect x="18" y="22" width="28" height="32" rx="3" fill="#fff"/><path d="M18 22l6-10h16l6 10z" fill="#74c0fc"/><rect x="18" y="46" width="28" height="8" rx="3" fill="#74c0fc"/>'+fc(32,34),
+BOOK:'<rect x="12" y="10" width="40" height="46" rx="5" fill="#4dabf7"/><path d="M20 10v46" fill="none"/><rect x="26" y="16" width="20" height="9" rx="2" fill="#fff"/>'+fc(36,40,6),
+EYE:'<path d="M5 32c8-14 46-14 54 0-8 14-46 14-54 0z" fill="#fff"/><circle cx="32" cy="32" r="11" fill="#4dabf7"/><circle cx="32" cy="32" r="5.5" fill="#3b2f2f" stroke="none"/><circle cx="35" cy="29" r="2.5" fill="#fff" stroke="none"/><path d="M16 24l-3-6M32 21v-8M48 24l3-6" fill="none"/>',
+APPLE:'<path d="M32 21C26 15 12 18 12 34c0 11 8 22 15 22 3 0 3-1 5-1s2 1 5 1c7 0 15-11 15-22 0-16-14-19-20-13z" fill="#ff6b6b"/><path d="M32 21c0-5 1-8 4-11" fill="none"/><path d="M36 12c4-4 10-3 11 0-3 3-8 4-11 0z" fill="#5bd16b"/>'+fc(32,38),
+FISH:'<path d="M44 32l14-11v22z" fill="#ff922b"/><ellipse cx="28" cy="32" rx="18" ry="13" fill="#ffa94d"/><path d="M26 20c3-5 8-5 10-2" fill="none"/><circle cx="18" cy="29" r="2.2" fill="#3b2f2f" stroke="none"/><ellipse cx="22" cy="36" rx="3" ry="2" fill="#ff8fa3" stroke="none"/><path d="M13 33q2 2.5 4 0" fill="none" stroke-width="2"/>',
+HAT:'<path d="M32 8L50 52H14z" fill="#ff8fa3"/><rect x="11" y="50" width="42" height="8" rx="4" fill="#ffd43b"/><circle cx="32" cy="8" r="5" fill="#ffd43b"/><circle cx="32" cy="26" r="2" fill="#fff" stroke="none"/>'+fc(32,40,5)
+};
+const tx=(x,t)=>'<text x="'+x+'" y="38" font-size="20" font-weight="800" text-anchor="middle" fill="#3b2f2f" stroke="none">'+t+'</text>';
+const tz=(x,y,s,t)=>'<text x="'+x+'" y="'+y+'" font-size="'+s+'" font-weight="800" text-anchor="middle" fill="#3b2f2f" stroke="none">'+t+'</text>';
+const IC=[
+svg('<rect x="8" y="14" width="28" height="36" rx="5" fill="#4ecdc4" transform="rotate(-8 22 32)"/><rect x="28" y="14" width="28" height="36" rx="5" fill="#ffc233" transform="rotate(8 42 32)"/>'+tx(42,"A")),
+svg('<rect x="5" y="14" width="54" height="36" rx="10" fill="#4ecdc4"/>'+tz(32,40,24,"C_T")),
+svg('<circle cx="28" cy="28" r="17" fill="#e7f5ff"/><path d="M40 40l14 14" fill="none" stroke-width="7"/>'+tx(28,"B").replace('y="38"','y="35"')),
+svg('<rect x="6" y="18" width="24" height="28" rx="5" fill="#9b7bff"/><rect x="34" y="18" width="24" height="28" rx="5" fill="#ff922b"/>'+tx(18,"H")+tx(46,"I")),
+svg('<path d="M12 40v-6c0-13 8-22 20-22s20 9 20 22v6" fill="none" stroke-width="5"/><rect x="7" y="36" width="12" height="18" rx="5" fill="#ff7a59"/><rect x="45" y="36" width="12" height="18" rx="5" fill="#ff7a59"/>'),
+svg('<rect x="6" y="14" width="52" height="36" rx="10" fill="#ffc800"/>'+tz(32,42,26,"Aa")),
+svg('<circle cx="32" cy="32" r="23" fill="#58cc02"/>'+tz(32,42,28,"A")),
+svg('<circle cx="32" cy="32" r="23" fill="#ce82ff"/>'+tz(32,39,18,"123")),
+svg('<rect x="5" y="16" width="25" height="32" rx="7" fill="#ff9600"/><rect x="34" y="16" width="25" height="32" rx="7" fill="#1cb0f6"/>'+tz(17.5,40,22,"A")+tz(46.5,40,22,"B")),
+svg('<circle cx="20" cy="20" r="11" fill="#ce82ff"/><circle cx="44" cy="20" r="11" fill="#ce82ff"/><circle cx="20" cy="44" r="11" fill="#ce82ff"/><circle cx="44" cy="44" r="11" fill="#ff4b4b"/>')
+];
+
+/* 1. Pasangan Huruf */
+function memory(){
+  const cards=sh(sh(AB).slice(0,6).flatMap(l=>[[l,l],[l,l.toLowerCase()]]));
+  let op=[],ok=0,mv=0,busy=false;
+  stage.innerHTML='<p class="hint">Match each capital letter with its small letter</p><div class="grid g4" id="gr"></div>';
+  $("sc").textContent="Moves 0";
+  cards.forEach(([l,t])=>{
+    const b=tile("?","cv");
+    b.onclick=()=>{
+      if(busy||b.classList.contains("up"))return;
+      b.classList.add("up");b.textContent=t;op.push([b,l]);
+      if(op.length==2){
+        mv++;$("sc").textContent="Moves "+mv;
+        if(op[0][1]==op[1][1]){op.forEach(x=>x[0].classList.add("hit"));op=[];if(++ok==6)setTimeout(()=>done(mv<=9?3:mv<=14?2:1,"Done in "+mv+" moves",memory),600)}
+        else{busy=true;tm=setTimeout(()=>{op.forEach(x=>{x[0].classList.remove("up");x[0].textContent="?"});op=[];busy=false},800)}
+      }
+    };
+    $("gr").appendChild(b);
+  });
+}
+
+/* 2. Huruf Hilang (Missing Letter) - defined after mc() */
+
+/* pilihan ganda (dipakai game 3 dan 5) */
+function mc(make,total=8){
+  let i=0,s=0;
+  (function nx(){
+    if(i==total)return done(s>=7?3:s>=5?2:1,"Correct on first try: "+s+" of "+total,()=>mc(make,total));
+    const q=make();let miss=0,lock=false;
+    $("sc").textContent=(i+1)+"/"+total;
+    stage.innerHTML='<div class="card">'+q.h+'</div><div class="grid g'+q.o.length+'" id="op"></div><p class="hint" id="fb">&nbsp;</p>';
+    q.o.forEach(o=>{const b=tile(o);b.onclick=()=>{
+      if(lock)return;
+      if(o==q.a){lock=true;b.classList.add("hit");if(!miss)s++;$("fb").textContent="Correct! Great!";tm=setTimeout(()=>{i++;nx()},1000)}
+      else{miss++;bad(b);$("fb").textContent="Try again"}
+    };$("op").appendChild(b)});
+    if(q.s)say(q.s);
+  })();
+}
+
+const hilang=()=>mc(()=>{
+  const w=rw(),k=Math.floor(Math.random()*w.length),a=w[k];
+  const word=w.split("").map((l,j)=>j==k?'<span class="gap">&nbsp;</span>':'<span>'+l+'</span>').join("");
+  return{a,s:w.toLowerCase(),o:sh([a,...sh(AB.filter(l=>l!=a)).slice(0,2)]),
+    h:'<div class="em">'+svg(SV[w])+'</div><div class="seq">'+word+'</div><p class="hint">Which letter is missing?</p>'};
+});
+
+/* 3. Cari Huruf */
+function cari(){
+  let r=0;const R=5;
+  (function nx(){
+    if(r==R)return done(3,"Sharp eyes!",cari);
+    const t=AB[Math.floor(Math.random()*26)],others=AB.filter(l=>l!=t);
+    const cells=sh([t,t,t,t,...sh(others).slice(0,8)]);let found=0;
+    $("sc").textContent="Round "+(r+1)+"/"+R;
+    stage.innerHTML='<div class="card"><div class="em">'+t+'</div><p class="hint">Tap every letter '+t+' (there are 4)</p></div><div class="grid g4" id="gr"></div>';
+    say("Find the letter "+t);
+    cells.forEach(l=>{const b=tile(l);b.onclick=()=>{
+      if(b.disabled)return;
+      if(l==t){b.disabled=true;b.classList.add("hit");if(++found==4){r++;tm=setTimeout(nx,900)}}else bad(b);
+    };$("gr").appendChild(b)});
+  })();
+}
+
+/* 4. Susun Kata */
+const WD=Object.keys(SV).map(w=>[w,svg(SV[w])]);
+function kata(){
+  const ws=sh(WD);let r=0;const R=5;
+  (function nx(){
+    if(r==R)return done(3,"You are a word builder!",kata);
+    const [w,e]=ws[r];let k=0;
+    $("sc").textContent="Word "+(r+1)+"/"+R;
+    stage.innerHTML='<div class="card"><div class="em">'+e+'</div><div class="seq" id="sl"></div></div><div class="row" id="tl"></div>';
+    w.split("").forEach(()=>{const s=document.createElement("span");s.className="gap";s.innerHTML="&nbsp;";$("sl").appendChild(s)});
+    sh(w.split("")).forEach(l=>{const b=tile(l);b.onclick=()=>{
+      if(b.disabled)return;
+      if(l==w[k]){b.disabled=true;b.classList.add("hit");const s=$("sl").children[k];s.textContent=l;s.className="ok";
+        if(++k==w.length){say(w);r++;tm=setTimeout(nx,1300)}}
+      else bad(b);
+    };$("tl").appendChild(b)});
+  })();
+}
+
+/* 5. Dengar dan Pilih */
+const dengar=()=>mc(()=>{
+  const a=AB[Math.floor(Math.random()*26)];
+  return{a,s:a,o:sh([a,...sh(AB.filter(l=>l!=a)).slice(0,3)]),
+    h:'<div class="em">'+IC[4]+'</div><p class="hint">Listen, then pick the letter</p><button class="btn" onclick="say(\''+a+'\')">▶ Play Again</button>'};
+});
+
+/* 6. Besar dan Kecil */
+const rl=()=>AB[Math.floor(Math.random()*26)];
+const rw=()=>Object.keys(SV)[Math.floor(Math.random()*10)];
+const besarkecil=()=>mc(()=>{const a=rl().toLowerCase();return{a,o:sh([a,...sh(AB.map(l=>l.toLowerCase()).filter(l=>l!=a)).slice(0,2)]),h:'<div class="em" style="font-weight:800">'+a.toUpperCase()+'</div><p class="hint">Which is the small letter?</p>',s:a.toUpperCase()}});
+
+/* 7. Huruf Pertama */
+const pertama=()=>mc(()=>{const w=rw(),a=w[0];return{a,o:sh([a,...sh(AB.filter(l=>l!=a)).slice(0,2)]),h:'<div class="em">'+svg(SV[w])+'</div><p class="hint">What is the first letter?</p>',s:w.toLowerCase()}});
+
+/* 8. Hitung Huruf */
+const hitung=()=>mc(()=>{const w=rw(),a=w.length;return{a,o:sh([a,...sh([3,4,5,6].filter(n=>n!=a)).slice(0,2)]),h:'<div class="em">'+svg(SV[w])+'</div><div style="font-size:2rem;font-weight:800;letter-spacing:.15em">'+w+'</div><p class="hint">How many letters?</p>',s:w.toLowerCase()}});
+
+/* 9. Vokal atau Konsonan */
+const VW=["A","E","I","O","U"];
+const vokal=()=>mc(()=>{const l=Math.random()<.4?VW[Math.floor(Math.random()*5)]:rl();return{a:VW.includes(l)?"Vowel":"Consonant",o:["Vowel","Consonant"],h:'<div class="em" style="font-weight:800">'+l+'</div><p class="hint">Vowel or consonant?</p>',s:l}});
+
+/* 10. Cari yang Beda */
+function beda(){
+  const P=[["b","d"],["p","q"],["m","n"],["u","n"],["E","F"],["O","Q"],["I","L"],["M","W"],["C","G"],["R","P"]];
+  let r=0;const R=6;
+  (function nx(){
+    if(r==R)return done(3,"Super sharp eyes!",beda);
+    const [x,y]=sh(P[Math.floor(Math.random()*P.length)]),k=Math.floor(Math.random()*9);
+    $("sc").textContent="Round "+(r+1)+"/"+R;
+    stage.innerHTML='<p class="hint">Tap the one letter that is different</p><div class="grid g3" id="gr"></div>';
+    for(let j=0;j<9;j++){const b=tile(j==k?y:x);b.onclick=()=>{
+      if(b.disabled)return;
+      if(j==k){b.classList.add("hit");[...$("gr").children].forEach(c=>c.disabled=true);r++;tm=setTimeout(nx,900)}else bad(b);
+    };$("gr").appendChild(b)}
+  })();
+}
+
+const G=[
+  {n:"Letter Match",e:"🃏",d:"Match capital and small letters",f:memory},
+  {n:"Missing Letter",e:"🔤",d:"Find the missing letter in the word",f:hilang},
+  {n:"Letter Hunt",e:"🕵️",d:"Find all the matching letters",f:cari},
+  {n:"Word Builder",e:"🧩",d:"Build the word from the picture",f:kata},
+  {n:"Listen and Pick",e:"🎧",d:"Hear a letter, then tap it",f:dengar},
+  {n:"Big and Small",e:"",d:"Match capital to small letters",f:besarkecil},
+  {n:"First Letter",e:"",d:"Guess the first letter of the picture",f:pertama},
+  {n:"Count Letters",e:"",d:"How many letters in the word?",f:hitung},
+  {n:"Vowel or Consonant",e:"",d:"Sort letters the right way",f:vokal},
+  {n:"Odd One Out",e:"",d:"Find the letter that is different",f:beda}
+];
+G.forEach((g,gi)=>{const b=document.createElement("button");b.className="gm";b.innerHTML=IC[gi]+'<div><b>'+g.n+'</b><span>'+g.d+'</span></div>';
+  b.onclick=()=>{clearTimeout(tm);$("ttl").textContent=g.n;$("sc").textContent="";$("menu").classList.add("hide");$("play").classList.remove("hide");g.f()};
+  $("list").appendChild(b)});
+function menu(){clearTimeout(tm);try{speechSynthesis.cancel()}catch(e){}$("play").classList.add("hide");$("menu").classList.remove("hide")}
+$("back").onclick=menu;
+$("go").onclick=()=>{$("home").classList.add("hide");$("menu").classList.remove("hide")};
+$("tohome").onclick=()=>{$("menu").classList.add("hide");$("home").classList.remove("hide")};
+$("bear").onclick=()=>say("Hi! Let's learn the alphabet together!");
+addEventListener("pointermove",e=>{const r=$("bear").getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height*.4),m=Math.hypot(dx,dy)||1,k=Math.min(2.5,m/40);document.querySelector(".pp").setAttribute("transform","translate("+(dx/m*k)+" "+(dy/m*k)+")")});
+</script>
+</body>
+</html>
